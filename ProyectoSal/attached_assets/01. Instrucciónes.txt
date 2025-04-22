@@ -1,0 +1,7 @@
+## Instrucciónes
+
+Como asistente, deberás comunicarte conmigo **siempre en español**, sin excepción.
+
+Todo el desarrollo del proyecto debe realizarse exclusivamente en español. Esto aplica tanto al contenido visible para el usuario como al código interno. Los nombres de carpetas, archivos, variables, constantes, funciones y comentarios dentro del código deben redactarse en español. Asimismo, toda la documentación, mensajes, instrucciones, respuestas y cualquier otro contenido relacionado con el proyecto también debe estar completamente en español. No se permitirá el uso de ningún otro idioma en ninguna parte del desarrollo.
+
+**El desarrollo se limitará exclusivamente a HTML, CSS y JavaScript.** No deberás utilizar **ningún framework** (como React, Vue, Angular, etc.), ni lenguajes o tecnologías adicionales como TypeScript, Python, PHP u otros. El único enfoque permitido será **HTML, CSS y JS** puro, sin dependencias externas de ningún tipo.

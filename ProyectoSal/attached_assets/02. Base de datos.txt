@@ -1,0 +1,52 @@
+## Base de Datos (Formato JSON)
+
+En este proyecto se implementará una **simulación de base de datos** utilizando exclusivamente archivos JSON, organizados en carpetas estructuradas.
+
+---
+
+### **Estructura General**
+
+Dentro de la carpeta raíz del proyecto debe crearse un directorio llamado `Database`. Esta carpeta contendrá todas las subcarpetas correspondientes a los usuarios registrados y, eventualmente, otros recursos relacionados con los datos del sistema.
+
+---
+
+### **Formato de Registro de Usuarios**
+
+Cada vez que un nuevo usuario se registre, se generará automáticamente una **subcarpeta dentro de `Database`**. Esta carpeta representará a un usuario único y seguirá un formato incremental para su identificación:
+
+- usuarioXXXX0
+- usuarioXXXX1
+- usuarioXXXX2
+- ...
+
+Cada carpeta de usuario almacenará archivos `JSON` con la información correspondiente, iniciando con el archivo `registro.json`, que contendrá los datos recolectados al momento del registro.
+
+---
+
+### **Ejemplo: Usuario de Prueba**
+
+Para propósitos de desarrollo y prueba del sistema, se creará un **usuario de ejemplo** que ocupará la primera posición (`usuarioXXXX0`).
+
+### **Datos del usuario de prueba:**
+
+- **Nombre**: Lucas
+- **Apellido**: Vázquez
+- **Correo electrónico**: [luca@gmx.com](mailto:luca@gmx.com)
+- **Contraseña**: Lucas1998mx.
+
+Estos datos serán almacenados dentro del archivo `registro.json`, ubicado en la ruta:
+
+```
+/Database/usuarioXXXX0/registro.json
+
+```
+
+Este archivo será la primera fuente de verificación al momento de probar la funcionalidad de inicio de sesión.
+
+---
+
+### **Validación de Acceso (Inicio de Sesión)**
+
+Al intentar iniciar sesión, el sistema debe recorrer cada subcarpeta dentro de `Database`, acceder a su respectivo `registro.json` y comparar los datos ingresados por el usuario (correo y contraseña) con los almacenados. Si la información coincide, se permitirá el ingreso al dashboard.
+
+---

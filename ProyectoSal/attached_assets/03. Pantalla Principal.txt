@@ -1,0 +1,238 @@
+# Pantalla Principal
+
+## Diseño HTML
+
+### **1. Tarjeta Principal**
+
+La interfaz debe contar con una **tarjeta central** que actúe como contenedor visual y estructural de los elementos clave. Esta tarjeta debe tener **bordes definidos**, márgenes adecuados y un diseño limpio que facilite la lectura y navegación.
+
+### **Elementos clave dentro de la tarjeta:**
+
+- **Logo**: Ubicado en la esquina superior derecha. El logo de **Salvita** debe representar un **corazón dentro de un círculo**, evocando calidez y asistencia.
+- **Título principal**: Alineado a la izquierda del logo, incluir el texto **“SALVITA”**. Este debe ir en **tipografía bold**, utilizando una fuente clara, de gran tamaño y con alineación vertical centrada, para garantizar protagonismo visual.
+- **Subtítulo**: Justo debajo del título, añadir la frase **“Tu Asistente Virtual”**. Esta debe tener un tamaño menor que el título, pero lo suficientemente visible para resaltar su función.
+
+---
+
+### **2. Botones de Acción**
+
+En la parte media de la tarjeta, deben colocarse **dos botones principales**, dispuestos de manera **vertical** y **centrados horizontalmente** para mantener la simetría visual del diseño:
+
+- **Iniciar sesión**: Al hacer clic, este botón mostrará el formulario de login en la misma pantalla (ver sección de JavaScript).
+- **Registrarse**: Este botón redirige al usuario a la pantalla de registro correspondiente.
+
+Ambos botones deben ser fácilmente identificables, con un diseño consistente y accesible.
+
+---
+
+### **3. Enlaces Informativos**
+
+Bajo los botones, se deben incluir enlaces de texto con alineación **centrada**, que sirvan como referencia informativa y legal:
+
+- **Términos y condiciones**: Enlace que debe llevar a la sección correspondiente.
+- **Salvita 2025**: Puede actuar como **footer** o mención de derechos reservados, según el contexto del diseño.
+
+---
+
+## Diseño CSS
+
+### **Paleta de Colores Oficial**
+
+Para asegurar una identidad visual coherente y profesional, se establece una **paleta cromática principal** que debe aplicarse de forma **consistente** en todos los elementos del proyecto. Esta paleta transmite una estética moderna, limpia y confiable:
+
+- **#0CC0DF** – Color primario vibrante, ideal para llamados a la acción y énfasis visual.
+- **#4BBDBA** – Tono secundario suave, utilizado en fondos y contenedores.
+- **#8CDBED** – Acento complementario para secciones informativas o elementos destacados.
+- **#FFFFFF** – Blanco puro, utilizado como fondo base para maximizar el contraste y la legibilidad.
+
+---
+
+### **Tipografía Oficial**
+
+La fuente tipográfica principal del proyecto es **Montserrat**, seleccionada por su **claridad, elegancia y adaptabilidad** en múltiples dispositivos.
+
+Las variantes recomendadas para uso estratégico dentro del diseño son:
+
+- **Normal** – Para texto de párrafo o contenido informativo.
+- **Bold** – Para títulos principales, como **SALVITA**.
+- **Extra Bold** – Para destacar secciones clave o llamados urgentes.
+- **Italics** – Para citas, notas secundarias o énfasis sutiles.
+
+> La tipografía debe ser integrada localmente (self-hosted) para garantizar funcionalidad incluso en ausencia de conexión a internet.
+> 
+
+---
+
+### **Diseño Adaptable (Responsive Design)**
+
+Todo el diseño debe implementarse bajo los principios de **responsive design**, adaptándose correctamente a distintos tamaños de pantalla, sin pérdida de funcionalidad ni estética.
+
+Dispositivos considerados:
+
+- **Teléfonos móviles**
+- **Tabletas**
+- **Computadoras de escritorio**
+
+Se deben establecer **puntos de quiebre (breakpoints)** bien definidos, optimizando la visualización de contenido según el dispositivo.
+
+---
+
+### **Librerías CSS y Experiencia Visual**
+
+Para enriquecer la experiencia del usuario y mantener una interfaz moderna, se requiere la integración de **librerías CSS especializadas** que proporcionen efectos visuales y componentes preconstruidos.
+
+Librerías recomendadas:
+
+- **Animate.css** – Animaciones suaves para entradas y transiciones.
+- **AOS (Animate on Scroll)** – Efectos visuales al hacer scroll.
+- **Hover.css** – Transiciones elegantes para botones e íconos.
+- **Tailwind CSS** o **Bootstrap** – Frameworks robustos para diseño responsivo y componentes reutilizables.
+
+> Estas herramientas no solo optimizan tiempos de desarrollo, sino que mejoran significativamente la interacción visual y navegabilidad del sitio. Su implementación debe ser desde la fase inicial del proyecto.
+> 
+
+---
+
+### **Iconografía**
+
+La iconografía debe mantener una línea **uniforme, clara y sólida**, alineada con el estilo visual general del sitio.
+
+Estilo sugerido: **"Classic Solid"**, con íconos de trazo definido y fácil lectura.
+
+Bibliotecas recomendadas:
+
+- **Font Awesome**
+- **Heroicons**
+
+> Siempre que sea posible, selecciona versiones sólidas y consistentes con la identidad de marca.
+> 
+
+---
+
+## Diseño JavaScript
+
+### **Interacción con los Botones**
+
+Se deben programar las siguientes funcionalidades en **JavaScript** Vanilla para asegurar una experiencia dinámica y fluida dentro del mismo entorno visual:
+
+### 1. **Botón "Iniciar sesión"**
+
+- **Funcionalidad esperada**: Al hacer clic, debe **mostrarse dinámicamente el formulario de login en la misma pantalla actual**, sin redireccionar a otra página.
+- **Comportamiento UI**: El formulario debe aparecer con una animación sutil (por ejemplo, fade-in o slide-in), asegurando una transición suave y profesional.
+
+### 2. **Botón "Registrarse"**
+
+- **Funcionalidad esperada**: Este botón **redirige directamente a la pantalla de registro**, cargando una nueva vista o sección dentro del sitio.
+- **Nota adicional**: En dispositivos móviles, la carga debe ser rápida y sin saltos visuales, manteniendo coherencia de diseño.
+
+### 3. **Enlace "Términos y condiciones"**
+
+- **Funcionalidad esperada**: Al hacer clic, debe llevar al usuario a la pantalla dedicada de **Términos y Condiciones**, donde podrá consultar todos los aspectos legales del servicio.
+
+### 4. **Enlace "¿Olvidaste tu contraseña?"**
+
+- **Funcionalidad esperada**: Este enlace debe redirigir al usuario a la **pantalla de recuperación de contraseña**, asegurando que pueda iniciar el proceso de restablecimiento sin complicaciones.
+
+---
+
+> Todas las funciones deben estar optimizadas para cargar sin recargar toda la página (Single Page Application behavior recomendado) y deben ser compatibles con navegadores modernos.
+> 
+> 
+> Es fundamental validar que el comportamiento de cada interacción sea fluido y esté correctamente testeado en **dispositivos móviles, tabletas y computadoras de escritorio**.
+> 
+
+---
+
+## Pantalla de Inicio de Sesión (Log In)
+
+### **Diseño HTML**
+
+Esta pantalla debe integrarse dentro del mismo **contenedor de tarjeta principal** ya descrito en la estructura general del sitio. Los elementos deben estar alineados verticalmente y centrados horizontalmente dentro del cuerpo de la tarjeta.
+
+### **Elementos del formulario:**
+
+1. **Correo Electrónico**
+    - Campo obligatorio
+    - Validación básica del formato tipo email.
+2. **Contraseña**
+    - Campo obligatorio
+    - Debe validarse que contenga mínimo 8 caracteres, incluyendo una mayúscula, una minúscula y un número.
+3. **Mantener sesión iniciada**
+    - Casilla de verificación claramente etiquetada.
+4. **Botón "Iniciar sesión"**
+    - Valida el formulario y, si es correcto, redirige al dashboard.
+5. **Enlace "Olvidé mi contraseña"**
+    - Redirige a la pantalla de recuperación.
+6. **Enlace o botón: “¿No tienes cuenta? Regístrate aquí”**
+    - Redirige a la pantalla de registro.
+
+---
+
+### **Diseño CSS**
+
+Los estilos deben seguir la **paleta de colores oficial** y utilizar la **tipografía Montserrat** en variantes `Normal` y `Bold`.
+
+- Inputs y botones con bordes redondeados y sombras suaves.
+- Transiciones suaves al hacer hover en botones.
+- Estilo sutil y elegante en enlaces secundarios.
+- Espaciado uniforme entre campos para legibilidad y limpieza visual.
+
+---
+
+### **Diseño JavaScript**
+
+1. **Validación del formulario**:
+    - Validar formato de correo electrónico.
+    - Validar requisitos mínimos de contraseña.
+    - Mostrar mensajes de error si corresponde.
+2. **Botón "Iniciar sesión"**:
+    - Una vez validados los datos, debe buscar entre las carpetas de la base de datos (`Database/usuarioXXXX...`) y localizar el archivo `registro.json` que contenga un correo y contraseña coincidentes.
+    - Si se encuentra un usuario válido, redirigir al dashboard del sistema.
+    - Si no hay coincidencia, mostrar mensaje de error sin salir de la pantalla.
+3. **Enlace "Olvidé mi contraseña"**:
+    - Redirige a la vista de recuperación.
+4. **Enlace "¿No tienes cuenta? Regístrate aquí"**:
+    - Redirige a la vista de registro.
+
+---
+
+## Base de Dato (JSON)
+
+El proyecto utilizará una simulación de base de datos basada en archivos JSON para registrar y gestionar datos localmente, sin necesidad de conexión a un backend.
+
+### **Carpeta Base**
+
+Crear una carpeta llamada `Database` en la raíz del proyecto. Esta contendrá todas las subcarpetas correspondientes a los usuarios registrados.
+
+### **Formato de Usuario**
+
+Cada usuario registrado generará una subcarpeta con un nombre incremental tipo:
+
+- `usuarioXXXX0`
+- `usuarioXXXX1`
+- `usuarioXXXX2`
+
+Dentro de cada carpeta de usuario se guardará al menos un archivo `registro.json` con los datos del formulario de registro (nombre, apellido, correo, contraseña, etc.).
+
+### **Validación en Inicio de Sesión**
+
+Cuando un usuario intente iniciar sesión, el sistema debe recorrer todas las subcarpetas dentro de `Database`, abrir sus respectivos `registro.json` y buscar coincidencias entre el correo electrónico y la contraseña ingresados.
+
+Si los datos coinciden, se permitirá el acceso al sistema. De lo contrario, se mostrará un mensaje de error.
+
+### **Usuario de Prueba Inicial**
+
+Para efectos de prueba y desarrollo, se debe crear el primer usuario bajo la ruta:
+
+```
+/Database/usuarioXXXX0/registro.json
+```
+
+Con los siguientes datos:
+
+- **Nombre**: Lucas
+- **Apellido**: Vázquez
+- **Correo electrónico**: [luca@gmx.com](mailto:luca@gmx.com)
+- **Contraseña**: Lucas1998mx.
+
+---

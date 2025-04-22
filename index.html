@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SALVITA - Tu Asistente Virtual</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <meta name="description" content="SALVITA es tu asistente virtual personal para ayudarte en tu día a día">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="tarjeta-principal">
+            <div class="cabecera">
+                <div class="titulo-container">
+                    <h1 class="titulo">SALVITA</h1>
+                    <p class="subtitulo">Tu Asistente Virtual</p>
+                </div>
+                <div class="logo">
+                    <!-- Logo SVG: Corazón dentro de un círculo -->
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="25" cy="25" r="23" stroke="#0CC0DF" stroke-width="2" fill="none"/>
+                        <path d="M25 37.5C24.6667 37.5 24.3333 37.3667 24.1 37.1C22.9 36.0333 21.7583 35.025 20.675 34.075C18.5583 32.175 16.6833 30.4333 15.05 28.85C13.2167 27.05 11.7583 25.3083 10.675 23.625C9.55833 21.8917 9 20.1667 9 18.45C9 16.7667 9.54167 15.2417 10.625 13.875C11.7083 12.5083 13.125 11.6333 14.875 11.25C16.125 10.9833 17.3583 11.05 18.575 11.45C19.7917 11.85 20.875 12.5333 21.825 13.5C23.025 14.7333 23.8583 16.1667 24.325 17.8H25.675C26.1417 16.1667 26.975 14.7333 28.175 13.5C29.125 12.5333 30.2083 11.85 31.425 11.45C32.6417 11.05 33.875 10.9833 35.125 11.25C36.875 11.6333 38.2917 12.5083 39.375 13.875C40.4583 15.2417 41 16.7667 41 18.45C41 20.1667 40.4417 21.8917 39.325 23.625C38.2417 25.3083 36.7833 27.05 34.95 28.85C33.3167 30.4333 31.4417 32.175 29.325 34.075C28.2417 35.025 27.1 36.0333 25.9 37.1C25.6667 37.3667 25.3333 37.5 25 37.5Z" fill="#0CC0DF"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Vista Inicial -->
+            <div id="vistaInicial" class="vista">
+                <div class="botones-container">
+                    <button id="btnIniciarSesion" class="boton-principal">Iniciar Sesión</button>
+                    <button id="btnRegistrarse" class="boton-principal">Registrarse</button>
+                </div>
+                <div class="enlaces">
+                    <a href="#" class="enlace">Términos y condiciones</a>
+                    <p class="footer">Salvita 2025</p>
+                </div>
+            </div>
+
+            <!-- Vista de Login -->
+            <div id="vistaLogin" class="vista oculto">
+                <h2 class="seccion-titulo">Iniciar Sesión</h2>
+                <form id="formLogin" class="formulario">
+                    <div class="campo-formulario">
+                        <label for="correo">Correo Electrónico</label>
+                        <input type="email" id="correo" name="correo" required>
+                        <span class="error-mensaje" id="correoError"></span>
+                    </div>
+                    <div class="campo-formulario">
+                        <label for="contrasena">Contraseña</label>
+                        <input type="password" id="contrasena" name="contrasena" required>
+                        <span class="error-mensaje" id="contrasenaError"></span>
+                    </div>
+                    <div class="campo-checkbox">
+                        <input type="checkbox" id="mantenerSesion" name="mantenerSesion">
+                        <label for="mantenerSesion">Mantener sesión iniciada</label>
+                    </div>
+                    <button type="submit" class="boton-principal">Iniciar Sesión</button>
+                    <div class="mensaje-error" id="loginError"></div>
+                </form>
+                <div class="enlaces">
+                    <a href="#" id="olvidoContrasena" class="enlace">Olvidé mi contraseña</a>
+                    <a href="#" id="irARegistro" class="enlace">¿No tienes cuenta? Regístrate aquí</a>
+                    <a href="#" id="volverInicio" class="enlace">Volver al inicio</a>
+                </div>
+            </div>
+
+            <!-- Vista de Registro -->
+            <div id="vistaRegistro" class="vista oculto">
+                <h2 class="seccion-titulo">Crear Cuenta</h2>
+                <form id="formRegistro" class="formulario">
+                    <div class="campo-formulario">
+                        <label for="regNombre">Nombre</label>
+                        <input type="text" id="regNombre" name="nombre" required>
+                        <span class="error-mensaje" id="nombreError"></span>
+                    </div>
+                    <div class="campo-formulario">
+                        <label for="regApellido">Apellido</label>
+                        <input type="text" id="regApellido" name="apellido" required>
+                        <span class="error-mensaje" id="apellidoError"></span>
+                    </div>
+                    <div class="campo-formulario">
+                        <label for="regCorreo">Correo Electrónico</label>
+                        <input type="email" id="regCorreo" name="correo" required>
+                        <span class="error-mensaje" id="regCorreoError"></span>
+                    </div>
+                    <div class="campo-formulario">
+                        <label for="regContrasena">Contraseña</label>
+                        <input type="password" id="regContrasena" name="contrasena" required>
+                        <span class="error-mensaje" id="regContrasenaError"></span>
+                    </div>
+                    <div class="campo-formulario">
+                        <label for="confirmarContrasena">Confirmar Contraseña</label>
+                        <input type="password" id="confirmarContrasena" name="confirmarContrasena" required>
+                        <span class="error-mensaje" id="confirmarError"></span>
+                    </div>
+                    <button type="submit" class="boton-principal">Registrarse</button>
+                    <div class="mensaje-exito" id="registroExito"></div>
+                    <div class="mensaje-error" id="registroError"></div>
+                </form>
+                <div class="enlaces">
+                    <a href="#" id="irALogin" class="enlace">¿Ya tienes cuenta? Inicia sesión aquí</a>
+                    <a href="#" id="volverInicioDesdeRegistro" class="enlace">Volver al inicio</a>
+                </div>
+            </div>
+
+            <!-- Vista de Dashboard (placeholder) -->
+            <div id="vistaDashboard" class="vista oculto">
+                <h2 class="seccion-titulo">¡Bienvenido!</h2>
+                <p class="mensaje-bienvenida">Has iniciado sesión correctamente.</p>
+                <div class="datos-usuario">
+                    <p>Nombre: <span id="nombreUsuario"></span></p>
+                    <p>Correo: <span id="correoUsuario"></span></p>
+                </div>
+                <button id="btnCerrarSesion" class="boton-principal">Cerrar Sesión</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/validacion.js"></script>
+    <script src="js/baseDatos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
